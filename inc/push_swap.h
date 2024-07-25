@@ -6,7 +6,7 @@
 /*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 12:30:03 by ssandova          #+#    #+#             */
-/*   Updated: 2024/07/19 14:37:50 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/07/25 12:11:19 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,13 @@
 # include <unistd.h>
 # include <limits.h>
 //# include <libft.h>
+
+// create structure for stacks
+
+typedef struct stack
+{
+    
+    struct stack* next;
+} stack;
 
 # endif
