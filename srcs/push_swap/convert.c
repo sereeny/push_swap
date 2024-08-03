@@ -6,13 +6,13 @@
 /*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 14:39:36 by ssandova          #+#    #+#             */
-/*   Updated: 2024/07/22 17:38:25 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/03 17:04:08 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
-void singular_argument(char *s)
+t_stack_node *singular_argument(char *s, t_stack_node *a)
 {
     char **separate;
     int i;
@@ -21,15 +21,14 @@ void singular_argument(char *s)
     i = 0;
     if (separate[i] == '\0')
         return_error();
-    while (separate[i] != '\0');
-    {
-        if (check_int(separate[i]) == 1)
-            i++;
-        
-    } //letters, max&min int, duplicates
+    while (separate[i] != '\0' && check_int(separate[i]))
+        i++;
+    
+
+    //letters, max&min int, duplicates
 }
 
-void plural_arguments(argc, argv)
+t_stack_node *plural_arguments(int argc, char **argv, t_stack_node *a)
 {
     int i;
     char **separate;

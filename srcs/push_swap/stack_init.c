@@ -1,26 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   stack_init.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/19 13:20:17 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/03 15:19:11 by ssandova         ###   ########.fr       */
+/*   Created: 2024/08/03 16:30:28 by ssandova          #+#    #+#             */
+/*   Updated: 2024/08/03 17:04:07 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "inc/push_swap.h"
+# include "../../inc/push_swap.h"
 
-int	main(int argc, char** argv)
+static long ft_atol(const char *s)
 {
-	t_stack_node *a;
-	t_stack_node *b;
+	long	nbr;
+	int		sign;
 
-	if ((argc == 1) || (argc == 2 && !argv[1][0]))
-		return (1);
-	else if (argc == 2)
-		a = singular_argument(argv[1], a);
-	else if (argc > 2)
-		a = plural_arguments(argc, argv + 1, a);
+	nbr = 0;
+	sign = 1;
+
+	if (*s == '-' || *s == '+')
+	{
+		if (*s == '-')
+			sign = -1;
+		*s++;
+	}
+	while (ft_isdigit(*s))
+	{
+		nbr = nbr * 10 + (*s - '0');
+		s++;
+	}
+	return (nbr * sign);
 }
