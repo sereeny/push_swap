@@ -6,7 +6,7 @@
 /*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 12:30:03 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/03 14:55:19 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/05 14:42:38 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ char	**ft_split(char const *s, char c);
 void	return_error();
 bool	check_int(char *arg);
 bool 	check_minmax(int number);
-bool 	check_duplicates(int *numbers);
+bool 	check_duplicates(t_stack_node *a, int n);
 bool 	check_order(int *numbers, int len);
 
 // stack initiation

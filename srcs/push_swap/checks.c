@@ -6,7 +6,7 @@
 /*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:44:52 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/03 17:04:10 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/05 14:42:41 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,62 +28,43 @@ bool	check_int(char *arg)
 	while (arg[i] >= '0' && arg[i] <= '9' && arg[i] != '\0')
 		i++;
 	if (arg[i] == '\0')
-		return (true);
-	return_error();	
+		return (true);	
 	return (false);
 
 }
 
-// check that argument is over the min and below the max(1).
-bool check_minmax(int number)
+// retuerns 'true' if n is already in the list, or false if it isn't
+bool check_duplicates(t_stack_node *a, int n)
 {
-	if (number >= INT_MIN && number <= INT_MAX)
-		return (true);
-	return (false);
-}
-
-// check that none of the arguments are duplicate
-bool check_duplicates(int *numbers)
-{
-	int len;
-	int i;
-	int j;
-
-	len = sizeof(numbers) / sizeof(numbers[0]);
-	i = 0;
-	while (i < len)
+	if (!a)
+		return ;
+	while (a)
 	{
-		j = i + 1;
-		while (i < len)
-		{
-			if (numbers[i] == numbers[j])
-				return (false);
-			i++;
-		}
+		if (a->nbr = n)
+			return (true);
+		a=a->next;
 	}
-	return (true);
+	return(false);
 }
 
-//check if numbers are ordered (1) or not (0).
-bool check_order(int *numbers, int len)
+// returns 'true' if numbers are in ascending order, or 'false' if not
+bool	check_order(t_stack_node *stack)
 {
-	int i;
-	int j;
-
-	i = 0;
-	while (i < len - 1)
+	if (!stack)
+		return ;
+	while (stack->next != NULL)
 	{
-		j = i + 1;
-		if (numbers[i] > numbers[j])
+		if (stack->nbr > stack->next->nbr)
 			return (false);
-		i++;
+		stack = stack->next;
 	}
 	return (true);
 }
 
 //In case of error, it must display "Error" followed by a ’\n’ on the standard error.
-void	return_error()
+void	return_error(t_stack_node **stack)
 {
+	free_stack(&stack);
     write(2, "Error\n", 6);
     exit(EXIT_FAILURE);
 }
