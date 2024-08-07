@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+         #
+#    By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/19 13:29:44 by ssandova          #+#    #+#              #
-#    Updated: 2024/07/19 15:10:40 by ssandova         ###   ########.fr        #
+#    Updated: 2024/08/07 16:30:43 by ssandova         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 NAME				= push_swap
 
 # Directories
-LIBFT				= ./libft/libft.a
+LIBFT				= ./libft/inc/libft.h
 INC					= inc/
 SRC_DIR				= srcs/
 OBJ_DIR				= obj/
@@ -26,12 +26,13 @@ RM					= rm -f
 
 # Source Files
 
-#COMMANDS_DIR		=	$(SRC_DIR)commands/push.c \
-						$(SRC_DIR)commands/rev_rotate.c \
-						$(SRC_DIR)commands/rotate.c \
-						$(SRC_DIR)commands/sort_stacks.c \
-						$(SRC_DIR)commands/sort_three.c \
-						$(SRC_DIR)commands/swap.c
+COMMANDS_DIR		=	main.c \
+						$(SRC_DIR)commands/push.c \
+						$(SRC_DIR)commands/swap.c \
+						# $(SRC_DIR)commands/rev_rotate.c \
+						# $(SRC_DIR)commands/rotate.c \
+						# $(SRC_DIR)commands/sort_stacks.c \
+						# $(SRC_DIR)commands/sort_three.c \
 
 PUSH_SWAP_DIR		=	$(SRC_DIR)push_swap/convert.c \
 						$(SRC_DIR)push_swap/errors.c 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checks.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:44:52 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/05 14:42:41 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/07 11:13:55 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ bool	check_order(t_stack_node *stack)
 //In case of error, it must display "Error" followed by a ’\n’ on the standard error.
 void	return_error(t_stack_node **stack)
 {
-	free_stack(&stack);
+//	free_stack(&stack);
     write(2, "Error\n", 6);
     exit(EXIT_FAILURE);
 }

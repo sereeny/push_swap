@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 12:30:03 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/05 14:42:38 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/07 16:23:04 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,14 @@ bool 	check_order(int *numbers, int len);
 // nodes initiation
 
 // stack utils
+t_stack_node	*find_last_node(t_stack_node *first);
 
 // commands
+void	sa(t_stack_node **stack_a, bool print);
+void	sb(t_stack_node	**stack_b, bool print);
+void	ss(t_stack_node **stack_a, t_stack_node **stack_b, bool print);
+void	pa(t_stack_node **a, t_stack_node **b, bool print);
+void	pb(t_stack_node **a, t_stack_node **b, bool print);
 
 // algorithms
 

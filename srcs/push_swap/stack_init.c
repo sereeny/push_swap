@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_init.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 16:30:28 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/05 14:42:40 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/07 11:27:25 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,8 @@ static long ft_atol(const char *s)
 
 void	append_node(t_stack_node **stack, int value)
 {
-	t_stack_node *node;
+	t_stack_node	*node;
+	t_stack_node	*last_node;
 
 	if (!stack)
 		return ;
@@ -49,6 +50,12 @@ void	append_node(t_stack_node **stack, int value)
 	{
 		*stack = node;
 		return ;		
+	}
+	else
+	{
+		last_node = find_last_node(*stack);
+		node->prev = last_node;
+		last_node->next = node;
 	}
 	
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 14:30:37 by ssandova          #+#    #+#             */
-/*   Updated: 2023/10/23 16:36:19 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/07 16:40:16 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdio.h>
+# include "ft_printf.h"
+# include "get_next_line.h"
 
 void	ft_bzero(void *s, size_t n);
 int		ft_isalnum(int c);

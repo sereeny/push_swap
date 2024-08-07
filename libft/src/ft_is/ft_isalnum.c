@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 17:24:50 by ssandova          #+#    #+#             */
-/*   Updated: 2023/10/07 13:06:46 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/07 16:31:22 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 isdigit(3) is true.  The value of the argument must be representable as an 
 unsigned char or the value of EOF.*/
 
-#include "libft.h"
+#include "../../inc/libft.h"
 
 int	ft_isalnum(int c)
 {
