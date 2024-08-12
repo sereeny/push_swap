@@ -6,7 +6,7 @@
 /*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 13:48:04 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/12 17:41:59 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/12 18:26:31 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 t_stack_node	*find_last_node(t_stack_node *first)
 {
 	if (first == NULL)
-		return ;
+		return NULL;
 	while (first->next != NULL)
 		first = first->next;
 	return (first);

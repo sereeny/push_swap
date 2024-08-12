@@ -6,7 +6,7 @@
 /*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:44:52 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/12 17:29:02 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/12 18:21:23 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,10 @@ bool	check_int(char *arg)
 bool check_duplicates(t_stack_node *a, int n)
 {
 	if (!a)
-		return ;
+		return (true);
 	while (a)
 	{
-		if (a->nbr = n)
+		if (a->nbr == n)
 			return (true);
 		a = a->next;
 	}
@@ -49,7 +49,7 @@ bool check_duplicates(t_stack_node *a, int n)
 bool	check_order(t_stack_node *stack)
 {
 	if (!stack)
-		return ;
+		return (true);
 	while (stack->next != NULL)
 	{
 		if (stack->nbr > stack->next->nbr)

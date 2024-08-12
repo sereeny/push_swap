@@ -6,7 +6,7 @@
 /*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 16:30:28 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/12 17:58:52 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/12 18:25:09 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static long	ft_atol(const char *s)
 	{
 		if (*s == '-')
 			sign = -1;
-		*s++;
+		s++;
 	}
 	while (ft_isdigit(*s))
 	{
@@ -71,9 +71,9 @@ void	init_stack_a(t_stack_node **a, char **args)
 		nbr = ft_atol(args[i]);
 		if (nbr > INT_MAX || nbr < INT_MIN)
 			return_error(a);
-		if (check_duplicates(*a, (int)nbr) == true);
+		if (check_duplicates(*a, (int)nbr) == true)
 			return_error(a);
-		append_node(*a, (int)nbr);
+		append_node(a, (int)nbr);
 		i++;
 	}
 }

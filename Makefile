@@ -17,13 +17,13 @@ RM					= rm -f
 COMMANDS_DIR		=	main.c \
 						$(SRC_DIR)commands/push.c \
 						$(SRC_DIR)commands/swap.c \
-						# $(SRC_DIR)commands/rev_rotate.c \
-						# $(SRC_DIR)commands/rotate.c \
-						# $(SRC_DIR)commands/sort_stacks.c \
-						# $(SRC_DIR)commands/sort_three.c \
+						$(SRC_DIR)commands/reverse_rotate.c \
+						$(SRC_DIR)commands/rotate.c \
 
 PUSH_SWAP_DIR		=	$(SRC_DIR)push_swap/convert.c \
-						#$(SRC_DIR)push_swap/errors.c 
+						$(SRC_DIR)push_swap/checks.c \
+						$(SRC_DIR)push_swap/stack_init.c \
+						$(SRC_DIR)push_swap/utils.c
 
 # Concatenate all source files
 SRCS 				= $(COMMANDS_DIR) $(PUSH_SWAP_DIR)

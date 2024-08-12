@@ -6,7 +6,7 @@
 /*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 12:30:03 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/12 18:07:11 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/12 18:36:37 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ typedef struct s_stack_node
 }	t_stack_node;
 
 void			singular_argument(char *s, t_stack_node *a, t_stack_node *b);
-void			plural_arguments(int argc, char **argv, t_stack_node *a,
-					t_stack_node *b);
+void			plural_arguments(char **argv, \
+				t_stack_node *a, t_stack_node *b);
 
 // helper functions
 char			**ft_split(char const *s, char c);
