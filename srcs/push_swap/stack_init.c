@@ -6,7 +6,7 @@
 /*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 16:30:28 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/12 16:13:48 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/12 17:58:52 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static long	ft_atol(const char *s)
 	return (nbr * sign);
 }
 
-void	append_node(t_stack_node **stack, int value)
+static void	append_node(t_stack_node **stack, int value)
 {
 	t_stack_node	*node;
 	t_stack_node	*last_node;
@@ -56,7 +56,6 @@ void	append_node(t_stack_node **stack, int value)
 		node->prev = last_node;
 		last_node->next = node;
 	}
-	
 }
 
 void	init_stack_a(t_stack_node **a, char **args)
@@ -68,13 +67,13 @@ void	init_stack_a(t_stack_node **a, char **args)
 	while (args[i])
 	{
 		if (check_int(args[i]) == false)
-			free;
+			return_error(a);
 		nbr = ft_atol(args[i]);
-		// if (nbr > INT_MAX || nbr < INT_MIN)
-		// 	free();
-		// if (check_duplicates(*a, (int)nbr) == true);
-		// 	free();
-		append_node(*a, nbr);
+		if (nbr > INT_MAX || nbr < INT_MIN)
+			return_error(a);
+		if (check_duplicates(*a, (int)nbr) == true);
+			return_error(a);
+		append_node(*a, (int)nbr);
 		i++;
 	}
 }

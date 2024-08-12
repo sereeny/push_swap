@@ -6,7 +6,7 @@
 /*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 13:48:04 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/12 16:11:04 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/12 17:41:59 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,32 @@ t_stack_node	*max_nbr(t_stack_node *first)
 		first = first->next;
 	}
 	return (largest_nbr);
+}
+
+int	stack_len(t_stack_node *stack)
+{
+	int	count;
+
+	if (!stack)
+		return (0);
+	count = 0;
+	while (stack)
+	{
+		stack = stack->next;
+		count++;
+	}
+	return (count);
+}
+
+void	sort_three(t_stack_node **stack)
+{
+	t_stack_node	*biggest;
+
+	biggest = max_nbr(*stack);
+	if (biggest == *stack)
+		ra(stack, false);
+	else if(biggest == (*stack)->next)
+		rra(stack, false);
+	if ((*stack)->nbr > (*stack)->next->nbr)
+		sa(stack, false);
 }
