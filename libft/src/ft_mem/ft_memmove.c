@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 16:46:49 by ssandova          #+#    #+#             */
-/*   Updated: 2023/10/07 13:11:52 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/12 16:03:23 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	if (d > s)
 	{
 		while (len--)
-		d[len] = s[len];
+			d[len] = s[len];
 	}
 	else
 		ft_memcpy(dst, src, len);

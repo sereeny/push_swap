@@ -6,7 +6,7 @@
 /*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 15:14:09 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/12 13:28:04 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/12 16:14:34 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ static void	push(t_stack_node **source, t_stack_node **dst)
 	}
 }
 
-/*pa (push a): Take the first element at the top of b and put it at the top of a.
-Do nothing if b is empty.*/
+/*pa (push a): Take the first element at the top of b and put it at the 
+top of a. Do nothing if b is empty.*/
 void	pa(t_stack_node **b, t_stack_node **a, bool print)
 {
 	push(b, a);
@@ -43,8 +43,8 @@ void	pa(t_stack_node **b, t_stack_node **a, bool print)
 		ft_printf("pa\n");
 }
 
-/*pb (push b): Take the first element at the top of a and put it at the top of b.
-Do nothing if a is empty.*/
+/*pb (push b): Take the first element at the top of a and put it at the 
+top of b. Do nothing if a is empty.*/
 void	pb(t_stack_node **a, t_stack_node **b, bool print)
 {
 	push(b, a);

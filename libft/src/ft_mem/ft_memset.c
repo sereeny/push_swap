@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 19:37:35 by ssandova          #+#    #+#             */
-/*   Updated: 2023/10/07 13:12:16 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/12 16:03:47 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ void	*ft_memset(void *b, int c, size_t len)
 		*p = (unsigned char)c;
 		p++;
 		len--;
-	}	
+	}
 	return (b);
 }

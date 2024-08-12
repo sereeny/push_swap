@@ -6,20 +6,19 @@
 /*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 16:30:28 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/07 11:27:25 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/12 16:13:48 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../../inc/push_swap.h"
+#include "../../inc/push_swap.h"
 
-static long ft_atol(const char *s)
+static long	ft_atol(const char *s)
 {
 	long	nbr;
 	int		sign;
 
 	nbr = 0;
 	sign = 1;
-
 	if (*s == '-' || *s == '+')
 	{
 		if (*s == '-')
@@ -60,7 +59,6 @@ void	append_node(t_stack_node **stack, int value)
 	
 }
 
-
 void	init_stack_a(t_stack_node **a, char **args)
 {
 	long	nbr;
@@ -72,11 +70,11 @@ void	init_stack_a(t_stack_node **a, char **args)
 		if (check_int(args[i]) == false)
 			free;
 		nbr = ft_atol(args[i]);
-		if (nbr > INT_MAX || nbr < INT_MIN)
-			free;
-		if (check_duplicates(*a, (int)nbr) == true);
-			free;
-		//append to stack
+		// if (nbr > INT_MAX || nbr < INT_MIN)
+		// 	free();
+		// if (check_duplicates(*a, (int)nbr) == true);
+		// 	free();
+		append_node(*a, nbr);
 		i++;
 	}
 }

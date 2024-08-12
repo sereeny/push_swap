@@ -6,11 +6,11 @@
 /*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 11:43:03 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/12 13:28:30 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/12 16:14:41 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../../inc/push_swap.h"
+#include "../../inc/push_swap.h"
 
 static void	swap(t_stack_node **head)
 {

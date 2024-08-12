@@ -6,11 +6,11 @@
 /*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 13:48:04 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/07 11:25:53 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/12 16:11:04 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../../inc/push_swap.h"
+#include "../../inc/push_swap.h"
 
 // returns the last node of the stack
 t_stack_node	*find_last_node(t_stack_node *first)
