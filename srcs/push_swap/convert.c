@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   convert.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 14:39:36 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/05 14:42:39 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/12 14:32:32 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,11 @@ t_stack_node *singular_argument(char *s, t_stack_node *a)
 
     separate = ft_split(s, ' ');
     i = 0;
-    
+
+	
 }
 
-t_stack_node *plural_arguments(int argc, char **argv, t_stack_node *a)
-{
+// t_stack_node *plural_arguments(int argc, char **argv, t_stack_node *a)
+// {
 
-}
+// }

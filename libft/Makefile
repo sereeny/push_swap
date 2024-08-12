@@ -80,18 +80,26 @@ OBJ 			= $(patsubst $(SRC_DIR)%.c,$(OBJ_DIR)%.o,$(SRC))
 all: 			$(NAME)
 
 $(NAME): 		$(OBJ)
+				@echo "📦 Creating archive $@..."
 				@$(AR) $(NAME) $(OBJ)
+				@echo "✅ Archive $@ created."
 
 $(OBJ_DIR)%.o:	$(SRC_DIR)%.c
+				@echo "🔨 Compiling $< into $@..."
 				@mkdir -p $(@D)
 				@$(CC) $(CFLAGS) $(INC) -c $< -o $@
+				@echo "✅ Compiled $< into $@."
 
 clean:
+				@echo "🧹 Cleaning object files and directories..."
 				@$(RM) -r $(OBJ_DIR)
 				@$(RM) .cache_exists
+				@echo "🧼 Cleaned."
 
 fclean: 		clean
+				@echo "🗑️ Removing archive $(NAME)..."
 				@$(RM) $(NAME)
+				@echo "❌ Removed archive $(NAME)."
 
 re: 			fclean all
 

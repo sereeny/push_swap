@@ -6,7 +6,7 @@
 /*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 12:30:03 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/07 16:23:04 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/12 14:24:08 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 # include <limits.h>
 # include <stdbool.h>
 # include "../libft/inc/libft.h"
-# include "../libft/inc/ft_printf.h"
 
 // create structure for stacks
 
@@ -45,11 +44,10 @@ char	**ft_split(char const *s, char c);
 
 
 // handle errors
-void	return_error();
+void	return_error(t_stack_node **stack);
 bool	check_int(char *arg);
-bool 	check_minmax(int number);
 bool 	check_duplicates(t_stack_node *a, int n);
-bool 	check_order(int *numbers, int len);
+bool	check_order(t_stack_node *stack);
 
 // stack initiation
 
@@ -62,7 +60,7 @@ t_stack_node	*find_last_node(t_stack_node *first);
 void	sa(t_stack_node **stack_a, bool print);
 void	sb(t_stack_node	**stack_b, bool print);
 void	ss(t_stack_node **stack_a, t_stack_node **stack_b, bool print);
-void	pa(t_stack_node **a, t_stack_node **b, bool print);
+void	pa(t_stack_node **b, t_stack_node **a, bool print);
 void	pb(t_stack_node **a, t_stack_node **b, bool print);
 
 // algorithms

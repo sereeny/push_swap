@@ -6,7 +6,7 @@
 /*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 14:30:37 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/07 16:40:16 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/12 14:07:09 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,12 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdio.h>
-# include "ft_printf.h"
-# include "get_next_line.h"
+# include <sys/types.h>
+# include <sys/stat.h>
+# include <fcntl.h>
+# include <stdarg.h>
 
+//libft + bonus
 void	ft_bzero(void *s, size_t n);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -71,5 +74,29 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+// printf
+int	ft_printnbr(int n);
+int	ft_printstr(char *s);
+int	ft_unsigned(unsigned int n);
+int	ft_printchar(int character);
+int	ft_hexadecimal(unsigned long num, const char format);
+int	ft_pointer(unsigned long n);
+int	ft_printf(char const *str, ...);
+
+// get next line
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 3
+# endif
+
+char	*get_next_line(int fd);
+char	*read_from_file(char *static_buffer, int fd);
+char	*remaining(char *static_buffer);
+char	*ft_strdup_gnl(char *s1);
+void	*ft_calloc_gnl(size_t count, size_t size);
+char	*ft_strchr_gnl(const char *s, int c);
+char	*ft_substr_gnl(char const *s, int start, int len);
+int		ft_strlen_gnl(const char *s);
+char	*ft_strjoin_gnl(char *s1, char *s2);
 
 #endif

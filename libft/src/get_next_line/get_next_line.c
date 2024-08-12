@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 20:35:33 by ssandova          #+#    #+#             */
-/*   Updated: 2024/07/19 11:48:59 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/12 13:23:00 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../../inc/libft.h"
 
 /*---------------------------------------------------------------------------
 Main GNL function. 

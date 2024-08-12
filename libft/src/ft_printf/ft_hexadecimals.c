@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_hexadecimals.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 19:44:02 by ssandova          #+#    #+#             */
-/*   Updated: 2023/11/21 18:25:14 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/12 13:22:31 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../../inc/libft.h"
 
 static int	ft_hexa_lower(unsigned long num)
 {

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_numbers.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 17:04:19 by ssandova          #+#    #+#             */
-/*   Updated: 2023/11/17 19:38:18 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/12 13:22:37 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../../inc/libft.h"
 
 int	ft_unsigned(unsigned int n)
 {

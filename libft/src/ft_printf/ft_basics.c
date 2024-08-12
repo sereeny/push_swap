@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_basics.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 13:48:45 by ssandova          #+#    #+#             */
-/*   Updated: 2023/11/21 17:44:35 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/12 13:22:23 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../../inc/libft.h"
 
 int	ft_printstr(char *s)
 {

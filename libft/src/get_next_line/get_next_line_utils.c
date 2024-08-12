@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 20:35:22 by ssandova          #+#    #+#             */
-/*   Updated: 2024/07/19 11:49:10 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/12 13:22:56 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../../inc/libft.h"
 
 /*-----------------------------------------------------------------------------
 The calloc() function contiguously allocates enough space for count objects 
