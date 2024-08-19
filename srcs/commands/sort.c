@@ -6,11 +6,16 @@
 /*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 09:15:01 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/19 09:43:35 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/19 11:05:12 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/push_swap.h"
+
+void	move_a_b(t_stack_node **a, t_stack_node **b)
+{
+	
+}
 
 void	sorter(t_stack_node **a, t_stack_node **b)
 {
@@ -23,7 +28,7 @@ void	sorter(t_stack_node **a, t_stack_node **b)
 		pb(a, b, false);
 	while (len-- > 3 && check_order(*a) == false)
 	{
-		init_nodes_a();
+		init_nodes_a(*a, *b);
 		move_a_b(a, b);
 	}
 	sort_three(a);
