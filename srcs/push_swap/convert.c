@@ -6,7 +6,7 @@
 /*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 14:39:36 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/12 18:36:55 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/19 09:14:33 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ void	singular_argument(char *s, t_stack_node *a, t_stack_node *b)
             sa(&a, false);
         else if (stack_len(a) == 3)
             sort_three(&a);
-        // else
-        //     sorter(&a, &b);
+        else
+            sorter(&a, &b);
     }
     free_stack(&a);
 }

@@ -6,7 +6,7 @@
 /*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:44:52 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/12 18:21:23 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/19 09:06:32 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,6 @@ bool	check_int(char *arg)
 // returns 'true' if n is already in the list, or false if it isn't.
 bool check_duplicates(t_stack_node *a, int n)
 {
-	if (!a)
-		return (true);
 	while (a)
 	{
 		if (a->nbr == n)

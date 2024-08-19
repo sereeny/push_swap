@@ -6,7 +6,7 @@
 /*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 12:30:03 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/12 18:36:37 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/19 10:48:41 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,13 @@ void			free_stack(t_stack_node **stack);
 void			return_error(t_stack_node **stack);
 
 // stack initiation
+void			sorter(t_stack_node **a, t_stack_node **b);
 void			init_stack_a(t_stack_node **a, char **args);
 
 // nodes initiation
+void			init_nodes_a(t_stack_node *a, t_stack_node *b);
+void			current_index(t_stack_node *stack);
+void			cheapest(t_stack_node *stack);
 
 // stack utils
 t_stack_node	*find_last_node(t_stack_node *first);
