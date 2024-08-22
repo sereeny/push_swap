@@ -6,7 +6,7 @@
 /*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 12:30:03 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/19 10:48:41 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/22 14:43:56 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void			plural_arguments(char **argv, \
 				t_stack_node *a, t_stack_node *b);
 
 // helper functions
-char			**ft_split(char const *s, char c);
+char 			**split(char *s, char c);
 
 // handle errors
 bool			check_int(char *arg);
@@ -56,14 +56,18 @@ void			init_stack_a(t_stack_node **a, char **args);
 
 // nodes initiation
 void			init_nodes_a(t_stack_node *a, t_stack_node *b);
+void			init_nodes_b(t_stack_node *a, t_stack_node *b);
 void			current_index(t_stack_node *stack);
 void			cheapest(t_stack_node *stack);
+void			prep_for_push(t_stack_node **stack, t_stack_node *top, \
+				char stack_name);
 
 // stack utils
 t_stack_node	*find_last_node(t_stack_node *first);
 int				stack_len(t_stack_node *stack);
 t_stack_node	*max_nbr(t_stack_node *first);
 t_stack_node	*min_nbr(t_stack_node *first);
+t_stack_node	*get_cheapest(t_stack_node *stack);
 
 // commands
 void			sa(t_stack_node **stack_a, bool print);

@@ -6,7 +6,7 @@
 /*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 09:41:06 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/19 10:43:50 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/22 14:33:16 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ static void	cost_a(t_stack_node *a, t_stack_node *b)
 	while (a)
 	{
 		a->push_cost = a->index;
-		if (a->above_median = false)
+		if (!(a->above_median))
 			a->push_cost = len_a - (a->index);
 		if (a->target_node->above_median)
 			a->push_cost += a->target_node->index;

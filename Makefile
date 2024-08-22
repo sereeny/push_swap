@@ -14,16 +14,20 @@ CFLAGS				= -Wall -Werror -Wextra -I$(INC) -I$(LIBFT_DIR)/inc
 RM					= rm -f
 
 # Source Files
-COMMANDS_DIR		=	main.c \
-						$(SRC_DIR)commands/push.c \
+COMMANDS_DIR		=	$(SRC_DIR)commands/push.c \
 						$(SRC_DIR)commands/swap.c \
 						$(SRC_DIR)commands/reverse_rotate.c \
 						$(SRC_DIR)commands/rotate.c \
+						$(SRC_DIR)commands/sort.c
 
-PUSH_SWAP_DIR		=	$(SRC_DIR)push_swap/convert.c \
+PUSH_SWAP_DIR		=	$(SRC_DIR)push_swap/push_swap.c \
+						$(SRC_DIR)push_swap/convert.c \
 						$(SRC_DIR)push_swap/checks.c \
 						$(SRC_DIR)push_swap/stack_init.c \
-						$(SRC_DIR)push_swap/utils.c
+						$(SRC_DIR)push_swap/utils.c \
+						$(SRC_DIR)push_swap/init_a_b.c \
+						$(SRC_DIR)push_swap/init_b_a.c \
+						$(SRC_DIR)push_swap/split.c
 
 # Concatenate all source files
 SRCS 				= $(COMMANDS_DIR) $(PUSH_SWAP_DIR)

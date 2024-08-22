@@ -6,11 +6,45 @@
 /*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 16:30:28 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/12 18:25:09 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/22 14:25:56 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/push_swap.h"
+
+void	prep_for_push(t_stack_node **stack, t_stack_node *top, char stack_name)
+{
+	while (*stack != top)
+	{
+		if (stack_name == 'a')
+		{
+			if (top->above_median)
+				ra(stack, false);
+			else
+				rra(stack, false);
+		}
+		else if (stack_name == 'b')
+		{
+			if (top->above_median)
+				rb(stack, false);
+			else
+				rrb(stack, false);
+		}
+	}
+}
+
+t_stack_node	*get_cheapest(t_stack_node *stack)
+{
+	if (!stack)
+		return (NULL);
+	while (stack)
+	{
+		if (stack->cheapest)
+			return (stack);
+		stack = stack->next;
+	}
+	return (NULL);
+}
 
 static long	ft_atol(const char *s)
 {
