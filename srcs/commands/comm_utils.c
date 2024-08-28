@@ -6,7 +6,7 @@
 /*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 14:27:14 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/28 15:22:06 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/28 16:03:09 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ void	prep_for_push(t_stack_node **stack, t_stack_node *top, char stack_name)
 	}
 }
 
+// moves the node with the smallest number to the top
 void	min_on_top(t_stack_node **a)
 {
 	while ((*a)->nbr != min_nbr(*a)->nbr)

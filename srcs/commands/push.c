@@ -6,7 +6,7 @@
 /*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 15:14:09 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/28 13:09:14 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/28 16:05:19 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static void	push(t_stack_node **source, t_stack_node **dst)
 top of a. Do nothing if b is empty.*/
 void	pa(t_stack_node **b, t_stack_node **a, bool print)
 {
-	push(b, a);
+	push(a, b);
 	if (!print)
 		ft_printf("pa\n");
 }

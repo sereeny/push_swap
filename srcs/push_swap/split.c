@@ -6,7 +6,7 @@
 /*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/22 14:38:17 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/28 14:58:36 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/28 17:08:42 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,24 +36,23 @@ static int	count_words(char *s, char c)
 	return (count);
 }
 
-static char	*get_next_word(char *s, char c)
+static char	*get_next_word(char *s, char c, int *cursor)
 {
-	static int	cursor = 0;
-	char		*next_word;
-	int			len;
-	int			i;
+	char	*next_word;
+	int		len;
+	int		i;
 
 	len = 0;
 	i = 0;
-	while (s[cursor] == c)
-		++cursor;
-	while ((s[cursor + len] != c) && s[cursor + len])
+	while (s[*cursor] == c)
+		++(*cursor);
+	while ((s[*cursor + len] != c) && s[*cursor + len])
 		++len;
-	next_word = malloc((size_t)len * sizeof(char) + 1);
+	next_word = malloc((size_t)len + 1);
 	if (!next_word)
 		return (NULL);
-	while ((s[cursor] != c) && s[cursor])
-		next_word[i++] = s[cursor++];
+	while ((s[*cursor] != c) && s[*cursor])
+		next_word[i++] = s[(*cursor)++];
 	next_word[i] = '\0';
 	return (next_word);
 }
@@ -63,25 +62,19 @@ char	**split(char *s, char c)
 	int		words_count;
 	char	**result_array;
 	int		i;
+	int		cursor;
 
 	i = 0;
+	cursor = 0;
 	words_count = count_words(s, c);
 	if (!words_count)
 		exit(1);
-	result_array = malloc(sizeof(char *) * (size_t)(words_count + 2));
+	result_array = malloc(sizeof(char *) * (size_t)(words_count + 1));
 	if (!result_array)
 		return (NULL);
-	while (words_count-- >= 0)
+	while (i < words_count)
 	{
-		if (i == 0)
-		{
-			result_array[i] = malloc(sizeof(char));
-			if (!result_array[i])
-				return (NULL);
-			result_array[i++][0] = '\0';
-			continue ;
-		}
-		result_array[i++] = get_next_word(s, c);
+		result_array[i++] = get_next_word(s, c, &cursor);
 	}
 	result_array[i] = NULL;
 	return (result_array);

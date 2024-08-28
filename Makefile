@@ -10,7 +10,7 @@ OBJ_DIR				= obj/
 
 # Compiler and CFlags
 CC					= gcc
-CFLAGS				= -Wall -Werror -Wextra -I$(INC) -I$(LIBFT_DIR)/inc
+CFLAGS				= -g -Wall -Werror -Wextra -I$(INC) -I$(LIBFT_DIR)/inc
 RM					= rm -f
 
 # Source Files
@@ -22,7 +22,6 @@ COMMANDS_DIR		=	$(SRC_DIR)commands/push.c \
 						$(SRC_DIR)commands/comm_utils.c
 
 PUSH_SWAP_DIR		=	$(SRC_DIR)push_swap/push_swap.c \
-						$(SRC_DIR)push_swap/convert.c \
 						$(SRC_DIR)push_swap/checks.c \
 						$(SRC_DIR)push_swap/stack_init.c \
 						$(SRC_DIR)push_swap/utils.c \
