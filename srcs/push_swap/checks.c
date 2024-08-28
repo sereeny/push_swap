@@ -6,7 +6,7 @@
 /*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:44:52 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/19 09:06:32 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/28 15:04:51 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 // check that argument is an integer(true) or not (false).
 bool	check_int(char *arg)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (arg[i] == '\0')
@@ -27,12 +27,12 @@ bool	check_int(char *arg)
 	while (arg[i] >= '0' && arg[i] <= '9' && arg[i] != '\0')
 		i++;
 	if (arg[i] == '\0')
-		return (true);	
+		return (true);
 	return (false);
 }
 
 // returns 'true' if n is already in the list, or false if it isn't.
-bool check_duplicates(t_stack_node *a, int n)
+bool	check_duplicates(t_stack_node *a, int n)
 {
 	while (a)
 	{
@@ -40,7 +40,7 @@ bool check_duplicates(t_stack_node *a, int n)
 			return (true);
 		a = a->next;
 	}
-	return(false);
+	return (false);
 }
 
 // returns 'true' if numbers are in ascending order, or 'false' if not
@@ -75,10 +75,11 @@ void	free_stack(t_stack_node **stack)
 	*stack = NULL;
 }
 
-//In case of error, it must display "Error" followed by a ’\n’ on the standard error.
+//In case of error, it must display "Error" followed by a ’\n’
+// on the standard error.
 void	return_error(t_stack_node **stack)
 {
 	free_stack(stack);
-    write(2, "Error\n", 6);
-    exit(EXIT_FAILURE);
+	write(2, "Error\n", 6);
+	exit(EXIT_FAILURE);
 }

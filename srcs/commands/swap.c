@@ -6,7 +6,7 @@
 /*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 11:43:03 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/12 16:14:41 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/28 14:38:11 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ Do nothing if there is only one or no elements.*/
 void	sa(t_stack_node **stack_a, bool print)
 {
 	swap(stack_a);
-	if (print)
+	if (!print)
 		ft_printf("sa\n");
 }
 
@@ -39,7 +39,7 @@ Do nothing if there is only one or no elements.*/
 void	sb(t_stack_node	**stack_b, bool print)
 {
 	swap(stack_b);
-	if (print)
+	if (!print)
 		ft_printf("sb\n");
 }
 
@@ -48,6 +48,6 @@ void	ss(t_stack_node **stack_a, t_stack_node **stack_b, bool print)
 {
 	swap(stack_a);
 	swap(stack_b);
-	if (print)
+	if (!print)
 		ft_printf("ss\n");
 }

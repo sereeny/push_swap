@@ -18,7 +18,8 @@ COMMANDS_DIR		=	$(SRC_DIR)commands/push.c \
 						$(SRC_DIR)commands/swap.c \
 						$(SRC_DIR)commands/reverse_rotate.c \
 						$(SRC_DIR)commands/rotate.c \
-						$(SRC_DIR)commands/sort.c
+						$(SRC_DIR)commands/sort.c \
+						$(SRC_DIR)commands/comm_utils.c
 
 PUSH_SWAP_DIR		=	$(SRC_DIR)push_swap/push_swap.c \
 						$(SRC_DIR)push_swap/convert.c \

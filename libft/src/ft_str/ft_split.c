@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ssandova <ssandova@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 15:50:24 by ssandova          #+#    #+#             */
-/*   Updated: 2024/07/19 15:10:42 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/28 15:28:16 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ static char	*ft_strings(char const *s, int st, int fi)
 		string[i] = s[st];
 		i++;
 		st++;
-	}	
+	}
 	string[i] = '\0';
 	return (string);
 }

@@ -6,7 +6,7 @@
 /*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 15:15:01 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/12 16:30:00 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/28 13:14:22 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static void	reverse_rotate(t_stack_node **stack)
 	last->next = *stack;
 	last->prev = NULL;
 	*stack = last;
-	last->next->prev = *stack;
+	last->next->prev = last;
 }
 
 /*rra (reverse rotate a): Shift down all elements of stack a by 1.
@@ -31,7 +31,7 @@ The last element becomes the first one.*/
 void	rra(t_stack_node **a, bool print)
 {
 	reverse_rotate(a);
-	if (print)
+	if (!print)
 		ft_printf("rra\n");
 }
 
@@ -40,7 +40,7 @@ The last element becomes the first one.*/
 void	rrb(t_stack_node **b, bool print)
 {
 	reverse_rotate(b);
-	if (print)
+	if (!print)
 		ft_printf("rrb\n");
 }
 
@@ -49,6 +49,6 @@ void	rrr(t_stack_node **a, t_stack_node **b, bool print)
 {
 	reverse_rotate(a);
 	reverse_rotate(b);
-	if (print)
+	if (!print)
 		ft_printf("rrr\n");
 }

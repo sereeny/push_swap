@@ -6,19 +6,20 @@
 /*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 10:44:18 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/22 13:28:46 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/28 14:59:43 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/push_swap.h"
 
+// sets the best targets for each node in stack a
 static void	set_target_b(t_stack_node *a, t_stack_node *b)
 {
 	t_stack_node	*current_a;
 	t_stack_node	*target_node;
 	long			best_match_index;
 
-	while(b)
+	while (b)
 	{
 		best_match_index = LONG_MAX;
 		current_a = a;
@@ -39,6 +40,7 @@ static void	set_target_b(t_stack_node *a, t_stack_node *b)
 	}
 }
 
+// prepares the nodes to push from b to a
 void	init_nodes_b(t_stack_node *a, t_stack_node *b)
 {
 	current_index(a);

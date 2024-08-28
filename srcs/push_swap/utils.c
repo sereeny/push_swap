@@ -6,7 +6,7 @@
 /*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 13:48:04 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/12 18:26:31 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/28 15:00:55 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,13 @@
 t_stack_node	*find_last_node(t_stack_node *first)
 {
 	if (first == NULL)
-		return NULL;
+		return (NULL);
 	while (first->next != NULL)
 		first = first->next;
 	return (first);
 }
 
+// returns node with the smallest number
 t_stack_node	*min_nbr(t_stack_node *first)
 {
 	t_stack_node	*smallest_nbr;
@@ -40,6 +41,7 @@ t_stack_node	*min_nbr(t_stack_node *first)
 	return (smallest_nbr);
 }
 
+// returns node with the largest number
 t_stack_node	*max_nbr(t_stack_node *first)
 {
 	t_stack_node	*largest_nbr;
@@ -58,6 +60,7 @@ t_stack_node	*max_nbr(t_stack_node *first)
 	return (largest_nbr);
 }
 
+// returns int with lenght of the linked list
 int	stack_len(t_stack_node *stack)
 {
 	int	count;
@@ -71,17 +74,4 @@ int	stack_len(t_stack_node *stack)
 		count++;
 	}
 	return (count);
-}
-
-void	sort_three(t_stack_node **stack)
-{
-	t_stack_node	*biggest;
-
-	biggest = max_nbr(*stack);
-	if (biggest == *stack)
-		ra(stack, false);
-	else if(biggest == (*stack)->next)
-		rra(stack, false);
-	if ((*stack)->nbr > (*stack)->next->nbr)
-		sa(stack, false);
 }

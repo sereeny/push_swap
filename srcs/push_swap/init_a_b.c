@@ -6,7 +6,7 @@
 /*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 09:41:06 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/22 14:33:16 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/28 15:00:34 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,26 @@
 
 void	current_index(t_stack_node *stack)
 {
-	int	index;
+	int	i;
 	int	median;
 
 	if (!stack)
 		return ;
-	index = 0;
+	i = 0;
 	median = stack_len(stack) / 2;
 	while (stack)
 	{
-		stack->index = index;
-		if (index <= median)
+		stack->index = i;
+		if (i <= median)
 			stack->above_median = true;
 		else
 			stack->above_median = false;
 		stack = stack->next;
-		index++;
+		i++;
 	}
 }
 
+// find target node of a in stack b
 static void	target_a(t_stack_node *a, t_stack_node *b)
 {
 	t_stack_node	*current_b;
@@ -60,10 +61,11 @@ static void	target_a(t_stack_node *a, t_stack_node *b)
 	}
 }
 
+// analyses the cost of the a node with its target b node. 
 static void	cost_a(t_stack_node *a, t_stack_node *b)
 {
-	int len_a;
-	int len_b;
+	int	len_a;
+	int	len_b;
 
 	len_a = stack_len(a);
 	len_b = stack_len(b);
@@ -80,11 +82,12 @@ static void	cost_a(t_stack_node *a, t_stack_node *b)
 	}
 }
 
-void	cheapest(t_stack_node *stack)
+// sets 'cheapest' on each node to true or false
+void	set_cheapest(t_stack_node *stack)
 {
 	long			cheapest_val;
-
 	t_stack_node	*cheapest_node;
+
 	if (!stack)
 		return ;
 	cheapest_val = LONG_MAX;
@@ -100,11 +103,12 @@ void	cheapest(t_stack_node *stack)
 	cheapest_node->cheapest = true;
 }
 
+// sets atributes in every node to prepare for push and sorting
 void	init_nodes_a(t_stack_node *a, t_stack_node *b)
 {
 	current_index(a);
 	current_index(b);
 	target_a(a, b);
 	cost_a(a, b);
-	cheapest(a);
+	set_cheapest(a);
 }

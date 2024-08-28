@@ -6,7 +6,7 @@
 /*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/22 14:38:17 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/22 14:42:20 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/28 14:58:36 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static int	count_words(char *s, char c)
 		inside_word = false;
 		while (*s == c)
 			++s;
-		while (*s != c && *s) 
+		while (*s != c && *s)
 		{
 			if (!inside_word)
 			{
@@ -58,7 +58,7 @@ static char	*get_next_word(char *s, char c)
 	return (next_word);
 }
 
-char **split(char *s, char c)
+char	**split(char *s, char c)
 {
 	int		words_count;
 	char	**result_array;

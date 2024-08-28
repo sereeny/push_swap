@@ -6,7 +6,7 @@
 /*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 15:14:09 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/12 16:14:34 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/28 13:09:14 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,18 @@ static void	push(t_stack_node **source, t_stack_node **dst)
 		return ;
 	temp = *source;
 	*source = (*source)->next;
-	(*source)->prev = NULL;
+	if (*source)
+		(*source)->prev = NULL;
+	temp->prev = NULL;
 	if (!*dst)
 	{
 		*dst = temp;
-		(*dst)->next = NULL;
+		temp->next = NULL;
 	}
 	else
 	{
 		temp->next = *dst;
-		(*dst)->prev = temp;
+		temp->next->prev = temp;
 		*dst = temp;
 	}
 }
@@ -39,7 +41,7 @@ top of a. Do nothing if b is empty.*/
 void	pa(t_stack_node **b, t_stack_node **a, bool print)
 {
 	push(b, a);
-	if (print)
+	if (!print)
 		ft_printf("pa\n");
 }
 
@@ -47,7 +49,7 @@ void	pa(t_stack_node **b, t_stack_node **a, bool print)
 top of b. Do nothing if a is empty.*/
 void	pb(t_stack_node **a, t_stack_node **b, bool print)
 {
-	push(b, a);
-	if (print)
+	push(a, b);
+	if (!print)
 		ft_printf("pb\n");
 }

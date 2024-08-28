@@ -6,46 +6,13 @@
 /*   By: ssandova <ssandova@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 16:30:28 by ssandova          #+#    #+#             */
-/*   Updated: 2024/08/22 14:25:56 by ssandova         ###   ########.fr       */
+/*   Updated: 2024/08/28 15:01:27 by ssandova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/push_swap.h"
 
-void	prep_for_push(t_stack_node **stack, t_stack_node *top, char stack_name)
-{
-	while (*stack != top)
-	{
-		if (stack_name == 'a')
-		{
-			if (top->above_median)
-				ra(stack, false);
-			else
-				rra(stack, false);
-		}
-		else if (stack_name == 'b')
-		{
-			if (top->above_median)
-				rb(stack, false);
-			else
-				rrb(stack, false);
-		}
-	}
-}
-
-t_stack_node	*get_cheapest(t_stack_node *stack)
-{
-	if (!stack)
-		return (NULL);
-	while (stack)
-	{
-		if (stack->cheapest)
-			return (stack);
-		stack = stack->next;
-	}
-	return (NULL);
-}
-
+// converts string into long
 static long	ft_atol(const char *s)
 {
 	long	nbr;
@@ -67,6 +34,7 @@ static long	ft_atol(const char *s)
 	return (nbr * sign);
 }
 
+// searches for the last node and appends a new node with the value given
 static void	append_node(t_stack_node **stack, int value)
 {
 	t_stack_node	*node;
@@ -77,21 +45,22 @@ static void	append_node(t_stack_node **stack, int value)
 	node = malloc(sizeof(t_stack_node));
 	if (!node)
 		return ;
-	node->nbr = value;
 	node->next = NULL;
+	node->nbr = value;
 	if (!*stack)
 	{
 		*stack = node;
-		return ;		
+		node->prev = NULL;
 	}
 	else
 	{
 		last_node = find_last_node(*stack);
-		node->prev = last_node;
 		last_node->next = node;
+		node->prev = last_node;
 	}
 }
 
+//initiates stack, handles errors and appends new node
 void	init_stack_a(t_stack_node **a, char **args)
 {
 	long	nbr;
@@ -110,4 +79,18 @@ void	init_stack_a(t_stack_node **a, char **args)
 		append_node(a, (int)nbr);
 		i++;
 	}
+}
+
+// searches for the cheapest node 
+t_stack_node	*get_cheapest(t_stack_node *stack)
+{
+	if (!stack)
+		return (NULL);
+	while (stack)
+	{
+		if (stack->cheapest)
+			return (stack);
+		stack = stack->next;
+	}
+	return (NULL);
 }
